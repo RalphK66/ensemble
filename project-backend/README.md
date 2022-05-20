@@ -18,7 +18,7 @@ CREATE DATABASE {name}
 
 #### add: 
 ```env
-DATABASE_URL="mysql://root:yourpassword!@localhost:3306/dbname?schema=public"
+DATABASE_URL="mysql://root:yourpassword@localhost:3306/name?schema=public"
 ```
 
 ---
