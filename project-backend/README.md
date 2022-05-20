@@ -19,7 +19,9 @@ CREATE DATABASE {name}
 ```env
 DATABASE_URL="mysql://username:password@localhost:3306/db_name?schema=public"
 ```
-> use your username, password and db_name
+> use your **username**, **password** and **db_name**
+           
+           
 ---
 
 ### Install dependencies
@@ -62,7 +64,7 @@ npm run dev
 ---
 
 `POST /movie/title`
-- _`req.body`_
+- _`req.body`_:
     ```json
     {
       "title" : "movie title"
@@ -72,7 +74,7 @@ npm run dev
 ---
 
 `POST /movie`
-- _`req.body`_
+- _`req.body`_:
     ```json
     {
       "title" : "Some Movie" - required,
@@ -89,7 +91,7 @@ npm run dev
 ---
 
 `PUT /movie/:id`
-- _`req.body`_
+- _`req.body`_:
     ```json
     {
       "title" : "Some Movie",
