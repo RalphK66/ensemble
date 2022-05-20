@@ -22,7 +22,12 @@ router.post('/movie', async (req, res) => {
     if (await alreadyExists(title)) {
       res.status(200).send({ success: false, message: `${title} is already in the database.` })
     }
-    const movie = await createMovie({ title, description, release: +release, duration })
+    const movie = await createMovie({
+      title,
+      description,
+      release: +release,
+      duration,
+    })
     res.status(200).send({ success: true, movie })
   } catch (error) {
     res.status(500).send({ success: false, message: error.message, error })
@@ -105,7 +110,7 @@ router.put('/movie/:id', async (req, res) => {
 })
 
 // like movie
-router.put('/movie/like/:id', async (req, res) => {
+router.patch('/movie/like/:id', async (req, res) => {
   const { id } = req.params
   try {
     const updated = await likeMovie(+id)
@@ -120,7 +125,7 @@ router.put('/movie/like/:id', async (req, res) => {
 })
 
 // like movie
-router.put('/movie/dislike/:id', async (req, res) => {
+router.patch('/movie/dislike/:id', async (req, res) => {
   const { id } = req.params
   try {
     const updated = await dislikeMovie(+id)
