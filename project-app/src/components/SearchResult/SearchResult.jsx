@@ -2,7 +2,7 @@ import { Button, Card } from 'react-bootstrap'
 import Placeholder from '../../assets/images/No-Image-Placeholder.svg'
 const SearchResult = ({ media }) => {
   return (
-    <Card bg='dark' text='light' style={{ width: '20rem', height: '100%' }} align='center'>
+    <Card bg='dark' text='light' style={{ width: '12rem', height: '100%' }} align='center'>
       <Card.Img
         variant='top'
         src={media.Poster !== 'N/A' ? media.Poster : Placeholder}
